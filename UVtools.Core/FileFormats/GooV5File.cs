@@ -668,30 +668,49 @@ public sealed class GooV5File : FileFormat
     public override PrintParameterModifier[] PrintParameterModifiers => HaveTiltingVat
         ?
         [
-            PrintParameterModifier.BottomLayerCount, PrintParameterModifier.TransitionLayerCount,
+            PrintParameterModifier.BottomLayerCount,
+            PrintParameterModifier.TransitionLayerCount,
             PrintParameterModifier.LightOffDelay,
-            PrintParameterModifier.BottomWaitTimeBeforeCure, PrintParameterModifier.WaitTimeBeforeCure,
-            PrintParameterModifier.BottomExposureTime, PrintParameterModifier.ExposureTime,
-            PrintParameterModifier.BottomWaitTimeAfterCure, PrintParameterModifier.WaitTimeAfterCure,
-            PrintParameterModifier.BottomWaitTimeAfterLift, PrintParameterModifier.WaitTimeAfterLift,
-            PrintParameterModifier.BottomLightPWM, PrintParameterModifier.LightPWM
+            PrintParameterModifier.BottomWaitTimeBeforeCure,
+            PrintParameterModifier.WaitTimeBeforeCure,
+            PrintParameterModifier.BottomExposureTime,
+            PrintParameterModifier.ExposureTime,
+            PrintParameterModifier.BottomWaitTimeAfterCure,
+            PrintParameterModifier.WaitTimeAfterCure,
+            PrintParameterModifier.BottomWaitTimeAfterLift,
+            PrintParameterModifier.WaitTimeAfterLift,
+            PrintParameterModifier.BottomLightPWM,
+            PrintParameterModifier.LightPWM
         ]
         :
         [
-            PrintParameterModifier.BottomLayerCount, PrintParameterModifier.TransitionLayerCount,
+            PrintParameterModifier.BottomLayerCount,
+            PrintParameterModifier.TransitionLayerCount,
             PrintParameterModifier.LightOffDelay,
-            PrintParameterModifier.BottomWaitTimeBeforeCure, PrintParameterModifier.WaitTimeBeforeCure,
-            PrintParameterModifier.BottomExposureTime, PrintParameterModifier.ExposureTime,
-            PrintParameterModifier.BottomWaitTimeAfterCure, PrintParameterModifier.WaitTimeAfterCure,
-            PrintParameterModifier.BottomLiftHeight, PrintParameterModifier.BottomLiftSpeed,
-            PrintParameterModifier.LiftHeight, PrintParameterModifier.LiftSpeed,
-            PrintParameterModifier.BottomLiftHeight2, PrintParameterModifier.BottomLiftSpeed2,
-            PrintParameterModifier.LiftHeight2, PrintParameterModifier.LiftSpeed2,
-            PrintParameterModifier.BottomWaitTimeAfterLift, PrintParameterModifier.WaitTimeAfterLift,
-            PrintParameterModifier.BottomRetractSpeed, PrintParameterModifier.RetractSpeed,
-            PrintParameterModifier.BottomRetractHeight2, PrintParameterModifier.BottomRetractSpeed2,
-            PrintParameterModifier.RetractHeight2, PrintParameterModifier.RetractSpeed2,
-            PrintParameterModifier.BottomLightPWM, PrintParameterModifier.LightPWM
+            PrintParameterModifier.BottomWaitTimeBeforeCure,
+            PrintParameterModifier.WaitTimeBeforeCure,
+            PrintParameterModifier.BottomExposureTime,
+            PrintParameterModifier.ExposureTime,
+            PrintParameterModifier.BottomWaitTimeAfterCure,
+            PrintParameterModifier.WaitTimeAfterCure,
+            PrintParameterModifier.BottomLiftHeight,
+            PrintParameterModifier.BottomLiftSpeed,
+            PrintParameterModifier.LiftHeight,
+            PrintParameterModifier.LiftSpeed,
+            PrintParameterModifier.BottomLiftHeight2,
+            PrintParameterModifier.BottomLiftSpeed2,
+            PrintParameterModifier.LiftHeight2,
+            PrintParameterModifier.LiftSpeed2,
+            PrintParameterModifier.BottomWaitTimeAfterLift,
+            PrintParameterModifier.WaitTimeAfterLift,
+            PrintParameterModifier.BottomRetractSpeed,
+            PrintParameterModifier.RetractSpeed,
+            PrintParameterModifier.BottomRetractHeight2,
+            PrintParameterModifier.BottomRetractSpeed2,
+            PrintParameterModifier.RetractHeight2,
+            PrintParameterModifier.RetractSpeed2,
+            PrintParameterModifier.BottomLightPWM,
+            PrintParameterModifier.LightPWM
         ];
 
     public override PrintParameterModifier[] PrintParameterPerLayerModifiers => !IsPerLayerSettingsAllowed
@@ -700,22 +719,31 @@ public sealed class GooV5File : FileFormat
             ?
             [
                 PrintParameterModifier.Pause,
-                PrintParameterModifier.PositionZ, PrintParameterModifier.LightOffDelay,
-                PrintParameterModifier.WaitTimeBeforeCure, PrintParameterModifier.ExposureTime,
-                PrintParameterModifier.WaitTimeAfterCure, PrintParameterModifier.WaitTimeAfterLift,
+                PrintParameterModifier.PositionZ,
+                PrintParameterModifier.LightOffDelay,
+                PrintParameterModifier.WaitTimeBeforeCure,
+                PrintParameterModifier.ExposureTime,
+                PrintParameterModifier.WaitTimeAfterCure,
+                PrintParameterModifier.WaitTimeAfterLift,
                 PrintParameterModifier.LightPWM
             ]
             :
             [
                 PrintParameterModifier.Pause,
-                PrintParameterModifier.PositionZ, PrintParameterModifier.LightOffDelay,
-                PrintParameterModifier.WaitTimeBeforeCure, PrintParameterModifier.ExposureTime,
+                PrintParameterModifier.PositionZ,
+                PrintParameterModifier.LightOffDelay,
+                PrintParameterModifier.WaitTimeBeforeCure,
+                PrintParameterModifier.ExposureTime,
                 PrintParameterModifier.WaitTimeAfterCure,
-                PrintParameterModifier.LiftHeight, PrintParameterModifier.LiftSpeed,
-                PrintParameterModifier.LiftHeight2, PrintParameterModifier.LiftSpeed2,
+                PrintParameterModifier.LiftHeight,
+                PrintParameterModifier.LiftSpeed,
+                PrintParameterModifier.LiftHeight2,
+                PrintParameterModifier.LiftSpeed2,
                 PrintParameterModifier.WaitTimeAfterLift,
-                PrintParameterModifier.RetractSpeed, PrintParameterModifier.RetractHeight2,
-                PrintParameterModifier.RetractSpeed2, PrintParameterModifier.LightPWM
+                PrintParameterModifier.RetractSpeed,
+                PrintParameterModifier.RetractHeight2,
+                PrintParameterModifier.RetractSpeed2,
+                PrintParameterModifier.LightPWM
             ];
 
     public override bool HaveTiltingVat => MachineName.Contains("Saturn 4 Ultra", StringComparison.OrdinalIgnoreCase)
