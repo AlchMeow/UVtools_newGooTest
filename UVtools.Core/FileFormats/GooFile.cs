@@ -828,6 +828,8 @@ public sealed class GooFile : FileFormat
 
     public override Endianness FileFormatEndianness => Endianness.Big;
 
+    public override string? ConvertMenuGroup => "Elegoo";
+
     public override FileExtension[] FileExtensions { get; } =
     [
         new(typeof(GooFile), "goo", "Elegoo GOO"),

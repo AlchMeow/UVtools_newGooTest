@@ -629,6 +629,8 @@ public sealed class GooV5File : FileFormat
 
     public override FileFormatType FileType => FileFormatType.Binary;
 
+    public override string? ConvertMenuGroup => "Elegoo";
+
     public override FileExtension[] FileExtensions { get; } =
     [
         new(typeof(GooV5File), "goo", "Elegoo GOO V5")
